@@ -76,8 +76,19 @@ class _LoginState extends State<Login> {
                 ElevatedButton(
                   child: Text('LOGIN'),
                   onPressed: (){
-                  })
-                
+                  }), 
+              TextButton(
+                        child: Text("User",),
+                        onPressed: () {
+                          //Get.to(() => const UserHome());
+                        }
+              ),
+              TextButton(
+                        child: Text("Admin"),
+                        onPressed: () {
+                          //Get.to(() => const UserHome());
+                        }
+              ),
             ],
           ),
         ),
