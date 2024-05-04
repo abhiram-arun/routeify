@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:frontend/user/views/userhome.dart';
 
-class Login extends StatefulWidget {
+class Login extends StatelessWidget {
   const Login({super.key});
 
-  @override
-  State<Login> createState() => _LoginState();
-}
-
-class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     final _screenheight = MediaQuery.of(context).size.height;
@@ -79,14 +75,24 @@ class _LoginState extends State<Login> {
                   }), 
               TextButton(
                         child: Text("User",),
-                        onPressed: () {
-                          //Get.to(() => const UserHome());
-                        }
-              ),
+                        onPressed: ()
+                          {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Userhome(),
+                    ),
+                  );
+                }),
               TextButton(
                         child: Text("Admin"),
                         onPressed: () {
-                          //Get.to(() => const UserHome());
+                           /*Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => (),
+                    ),
+                  );*/
                         }
               ),
             ],
