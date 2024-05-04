@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
-import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -21,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%zp2myeu)&ow!@$17#tfy4ukg*^ys=bo0f4qdlt0d^drnamz92'
+SECRET_KEY = 'django-insecure-*gk%8^=ba8p@-71h43tf&ep!9jeux7c+9l++_8br(0a6shpno9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,17 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'corsheaders',
+    
     'killi.apps.KilliConfig',
-    
-    
+    'rest_framework',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
-
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware'
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -84,16 +78,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'killi',
-        'USER': 'killi_django_render_user',
-        'PASSWORD': '2ogxjorRS7Kq8M29zSaCemNvtay9XheV',
-        'HOST' : 'dpg-coqos8q0si5c7396c210-a.oregon-postgres.render.com',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
-##DATABASES["default"] = dj_database_url.parse("postgres://killi_django_render_user:2ogxjorRS7Kq8M29zSaCemNvtay9XheV@dpg-coqos8q0si5c7396c210-a.oregon-postgres.render.com/killi_django_render")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
