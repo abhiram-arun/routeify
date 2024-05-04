@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dropdown_search/dropdown_search.dart';
+import 'package:frontend/user/views/busfindview.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -94,7 +95,14 @@ class _HomeViewState extends State<HomeView> {
                     fontSize: 20,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BusFind(),
+                    ),
+                  );
+                },
               ),
             ),
           ),
