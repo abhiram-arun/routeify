@@ -35,11 +35,13 @@ class _HomeViewState extends State<HomeView> {
             child: Text(
               "Hello",
               style: TextStyle(
-                  fontSize: _screenwidth * 0.07, fontWeight: FontWeight.bold),
+                  fontSize: _screenwidth * 0.07,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 179, 8, 8)),
             ),
           ),
           SizedBox(
-            height: _screenheight * 0.05,
+            height: _screenheight * 0.03,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -76,6 +78,24 @@ class _HomeViewState extends State<HomeView> {
                 ),
               ),
               onChanged: print,
+            ),
+          ),
+          SizedBox(
+            height: _screenheight * 0.03,
+          ),
+          Center(
+            child: Container(
+              width: 150,
+              height: 60,
+              child: ElevatedButton(
+                child: Text(
+                  'FIND',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                onPressed: () {},
+              ),
             ),
           ),
         ],

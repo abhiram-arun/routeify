@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "832035876029",
+    "project_id": "kili-29b5d",
+    "storage_bucket": "kili-29b5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832035876029:android:8a6e4cedfbc34ef9789bd4",
+        "android_client_info": {
+          "package_name": "com.example.frontend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaihFNm2OkNbfLIAB-1epaBCM8uhSElNA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
