@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:frontend/Admin/views/adminhome.dart';
 import 'package:frontend/user/views/userhome.dart';
 
 class Login extends StatelessWidget {
@@ -72,6 +73,12 @@ class Login extends StatelessWidget {
                 ElevatedButton(
                   child: Text('LOGIN'),
                   onPressed: (){
+                     Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Userhome(),
+                    ),
+                  );
                   }), 
               TextButton(
                         child: Text("User",),
@@ -87,12 +94,12 @@ class Login extends StatelessWidget {
               TextButton(
                         child: Text("Admin"),
                         onPressed: () {
-                           /*Navigator.push(
+                           Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => (),
+                      builder: (context) => AdminHome(),
                     ),
-                  );*/
+                  );
                         }
               ),
             ],

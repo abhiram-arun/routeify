@@ -7,39 +7,34 @@ class WalletView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(
-              child: Text("  "),
-              height: 100.0,
-            ),
-            SizedBox(
-              child: Text(
-                "Wallet Balance is:",
-                style: TextStyle(fontSize: 25.0),
+      body: Center(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                child: Text("  "),
               ),
-              height: 100.0,
-            ),
-            SizedBox(
-              child: Text(
-                " 500 ",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50.0),
+              SizedBox(
+                child: Text(
+                  "Wallet Balance is:",
+                  style: TextStyle(fontSize: 25.0),
+                ),
+                height: 30.0,
               ),
-              height: 120.0,
-            ),
-            ElevatedButton(
-                child: Text("RECHARGE WALLET"),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Login(),
-                    ),
-                  );
-                }),
-          ]),
+              SizedBox(
+                child: Text(
+                  " ₹ 500 ",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 100.0,
+                      color: Color.fromARGB(255, 179, 8, 8)),
+                ),
+                height: 120.0,
+              ),
+              ElevatedButton(child: Text("RECHARGE WALLET"), onPressed: () {}),
+            ]),
+      ),
     );
   }
 }
