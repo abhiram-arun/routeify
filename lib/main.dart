@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:frontend/Admin/views/adminhome.dart';
 import 'package:frontend/Auth/views/login.dart';
 import 'package:frontend/user/views/userhome.dart';
+import 'package:frontend/user/views/walletview.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.poppinsTextTheme(
             Theme.of(context).textTheme,
           )),
-      home: const Login(),
+      home: const WalletView(),
     );
   }
 }
