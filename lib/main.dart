@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.poppinsTextTheme(
             Theme.of(context).textTheme,
           )),
-      home: const WalletView(),
+      home: const AdminHome(),
     );
   }
 }
