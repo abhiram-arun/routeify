@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dropdown_search/dropdown_search.dart';
+import 'package:frontend/Admin/views/qrgen.dart';
 
 class AdminHomeView extends StatefulWidget {
   const AdminHomeView({super.key});
@@ -94,7 +95,14 @@ class _AdminHomeViewState extends State<AdminHomeView> {
                     fontSize: 20,
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Qrgen(),
+                    ),
+                  );
+                },
               ),
             ),
           ),
