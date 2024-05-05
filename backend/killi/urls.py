@@ -2,8 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.getRoutes),
-    
     path('user/', views.getUser),
     path('buses/', views.getBuses),
     path('bus1/', views.getBus1),
@@ -16,7 +14,12 @@ urlpatterns = [
     path('bus2/create/', views.createBus2),
     path('bus3/create/', views.createBus3),
     
-    path('backend/<str:pk>/update',views.updateUser),
+    path('user/<str:pk>/update',views.updateUser),
+    path('buses/<str:pk>/udpade',views.updateBuses),
+    path('bus1/<str:pk>/update',views.updateBus1),
+    path('bus2/<str:pk>/update',views.updateBus2),
+    path('bus3/<str:pk>/update',views.updateBus3),
+    
     
     path('user/<str:pk>/', views.sgetUser),
     path('buses/<str:pk>/', views.sgetBuses),

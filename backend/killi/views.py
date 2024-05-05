@@ -174,7 +174,7 @@ def updateUser(request,pk):
     return Response(user_serializer.data)
 
 @api_view(['PUT'])
-def createBuses(request,pk):
+def updateBuses(request,pk):
     buses_data = request.data
     
     buses = Buses.objects.get(name=pk)
@@ -185,7 +185,7 @@ def createBuses(request,pk):
     return Response(buses_serializer.data)
 
 @api_view(['PUT'])
-def createBus1(request, pk):
+def updateBus1(request, pk):
     bus1_data = request.data
     bus1 = Bus1.objects.get(stop=pk)
     bus1_serializer = Bus1Serializer(bus1, data=request.data)
@@ -196,7 +196,7 @@ def createBus1(request, pk):
     
 
 @api_view(['PUT'])
-def createBus2(request, pk):
+def updateBus2(request, pk):
     bus2_data = request.data
     bus2 = Bus2.objects.get(stop=pk)
     bus2_serializer = Bus1Serializer(bus2, data=request.data)
@@ -206,7 +206,7 @@ def createBus2(request, pk):
     return Response(bus2_serializer.data)
 
 @api_view(['PUT'])
-def createBus3(request, pk):
+def updateBus3(request, pk):
     bus3_data = request.data
     bus3 = Bus3.objects.get(stop=pk)
     bus3_serializer = Bus1Serializer(bus3, data=request.data)
